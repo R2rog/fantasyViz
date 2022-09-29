@@ -1,24 +1,31 @@
 <script>
   import ScatterPlot from "./lib/scatterPlot.svelte";
   import Selector from "./lib/Selector.svelte";
-  import { csv} from "d3";
+  import { csv } from "d3";
   import { onMount } from "svelte";
 
-  let dataset=[];
-  let xSelection = 'petal_width';
-  let ySelection = 'petal_length';
+  let dataset = [];
+  let xSelection = "FantasyPoints";
+  let ySelection = "Tgt";
   let options;
   $: options = dataset.columns;
-  const row = function (data) {
-    data.sepal_length  =  +data.sepal_length;
-    data.sepal_width  =  +data.sepal_width;
-    data.petal_length  =  +data.petal_length;
-    data.petal_width  =  +data.petal_width;
-    return data;
+  const row = function (d) {
+    d.Tgt = +d.Tgt;
+    d.FantasyPoints = +d.FantasyPoints;
+    d.Rec = +d.Rec;
+    d.PassingYds = +d.PassingYds;
+    d.PassingTD = +d.PassingTD;
+    d.PassingAtt = +d.PassingAtt;
+    d.RushingYds = +d.RushingYds;
+    d.RushingTD = +d.RushingTD;
+    d.RushingAtt = +d.RushingAtt;
+    d.ReceivingYds + d.ReceivingYds;
+    d.ReceivingTD = +d.ReceivingTD;
+    return d;
   };
   onMount(async () => {
     dataset = await csv(
-      "https://gist.githubusercontent.com/curran/9e04ccfebeb84bcdc76c/raw/3d0667367fce04e8ca204117c290c42cece7fde0/iris.csv",
+      "https://raw.githubusercontent.com/fantasydatapros/data/master/yearly/2021.csv",
       row
     ).then((data) => {
       return data;

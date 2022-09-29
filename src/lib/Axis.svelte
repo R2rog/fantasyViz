@@ -2,7 +2,6 @@
 import { select, selectAll } from  "d3-selection";
     import { axisBottom, axisLeft } from  "d3-axis";
 
-
     export let  innerHeight;
     export let  margin;
     export let  position;
@@ -33,4 +32,4 @@ import { select, selectAll } from  "d3-selection";
 }
 </script>
 
-<g class="axis"  bind:this={g}  {transform} />
+<g class="axis"  bind:this={g} {transform} />
