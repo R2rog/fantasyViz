@@ -19,11 +19,13 @@
 </script>
 
 <div id="axis-selector">
+    <label for="x-axis">x axis</label>
     <select bind:value={xAxis} on:change={axisChange} id="x-axis">
         {#each options as option}
             <option value={option} id={'x-'+option} >{option}</option>
         {/each}
     </select>
+    <label for="y-axis">y axis</label>
     <select bind:value={yAxis} on:change={axisChange} id="y-axis">
         {#each options as option}
             <option value={option} id={'y-'+option}>{option}</option>

@@ -2,7 +2,6 @@
   import Axis from "./Axis.svelte";
   import { onMount } from "svelte";
   import { select, extent, scaleOrdinal, scaleLinear, scalePoint } from "d3";
-  import { slide } from "svelte/transition";
   export let dataset;
   export let xSelection;
   export let ySelection;
@@ -49,6 +48,7 @@
   });
 
   let showTooltip = function (data, e) {
+    console.log('Event target', e.target);
     let html =
       "Player: " +
       data.Player +
@@ -114,15 +114,22 @@
           on:blur={hideTooltip}
         />
       {/each}
-      <text transform={`translate(${-25},${innerHeight / 2}) rotate(-90)`}
+      <text transform={`translate(${-35},${innerHeight / 2}) rotate(-90)`}
         >{ySelection}</text
       >
-      <text x={innerWidth / 2} y={innerHeight + 30}>{xSelection}</text>
+      <text x={innerWidth / 2} y={innerHeight + 40}>{xSelection}</text>
     </g>
   </svg>
 </div>
 
 <style>
+  svg *{
+    transition: 0.8s;
+  }
+  g*{
+    color: aqua;
+    transition: 2s;
+  }
   text {
     fill: white;
     padding: 1rem;
