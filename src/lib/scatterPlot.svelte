@@ -128,7 +128,7 @@
   }
   g*{
     color: aqua;
-    transition: 2s;
+    transition: 0.2s;
   }
   text {
     fill: white;

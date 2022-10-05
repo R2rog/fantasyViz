@@ -1,6 +1,7 @@
 <script>
   import ScatterPlot from "./lib/scatterPlot.svelte";
   import Selector from "./lib/Selector.svelte";
+  import Weeks from "./lib/Weeks.svelte";
   import { csv } from "d3";
   import { onMount } from "svelte";
 
@@ -35,6 +36,7 @@
 
 <main>
   <Selector {options} bind:xAxis={xSelection} bind:yAxis={ySelection} />
+  <Weeks/>
   <ScatterPlot {dataset} {ySelection} {xSelection} />
 </main>
 
