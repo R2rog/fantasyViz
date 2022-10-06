@@ -2,6 +2,8 @@
     export let xAxis;
     export let yAxis;
     export let options= [1,2,3,4];
+    export let span;
+    export let selectedYear;
     let previousXAxis = '';
     let previousYAxis = '';
     function axisChange(e){
@@ -15,18 +17,18 @@
             if(previousYAxis!='') document.getElementById('x-'+previousYAxis).removeAttribute('disabled');
             previousYAxis = yAxis;
         }
-    }
+    };
 </script>
 
 <div id="axis-selector">
     <label for="season">Season</label>
-    <select id="season">
+    <select id="season" bind:value={selectedYear}>
         {#each {length: 53} as _, i}
         <option value={1970+i} id={(1970+i)+'_season_'} >{1970+i}</option>
         {/each}
     </select>
     <div class="button b2" id="button-16">
-        <input type="checkbox" class="checkbox" />
+        <input bind:checked={span} type="checkbox" id="span" class="checkbox" />
         <div class="knobs"></div>
         <div class="layer"></div>
     </div>

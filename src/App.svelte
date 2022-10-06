@@ -8,11 +8,41 @@
   let dataset = [];
   let xSelection = "FantasyPoints";
   let ySelection = "Tgt";
+  let weekly = false;
+  let week = 1;
+  let year = 2021;
   let options;
-  $: options = dataset.columns;
+  let url = 'https://raw.githubusercontent.com/fantasydatapros/data/master/yearly/2021.csv';
+  //week url: let url = 'https://raw.githubusercontent.com/fantasydatapros/data/master/yearly/2021.csv';
+  async function fetchData(url){
+    dataset = await csv(
+      url,
+      row
+    ).then((data) => {
+      return data;
+    });
+  }
+
+  $:{
+    weekly ? url = 'https://raw.githubusercontent.com/fantasydatapros/data/master/weekly/'+year+'/'+'week'+week+'.csv':
+            url = 'https://raw.githubusercontent.com/fantasydatapros/data/master/yearly/'+year+'.csv';
+    fetchData(url);
+  };
+  /*$: console.log('Selected week: ', week);
+  $: console.log('Weekly range?', weekly);
+  $: console.log('Selected year: ', year);*/
+  $:{
+    options = dataset.columns;
+    console.log(options);
+  } 
+  $: console.log('Dataset: ', dataset);
   const row = function (d) {
     d.Tgt = +d.Tgt;
+    //d.FantasyPoints = +d.FantasyPoints;
     d.FantasyPoints = +d.FantasyPoints;
+    d.PPRFantasyPoints =  +d.PPRFantasyPoints;
+    d.StandardFantasyPoints = +d.StandardFantasyPoints;
+    d.HalfPPRFantasyPoints = +d.HalfPPRFantasyPoints;
     d.Rec = +d.Rec;
     d.PassingYds = +d.PassingYds;
     d.PassingTD = +d.PassingTD;
@@ -24,9 +54,10 @@
     d.ReceivingTD = +d.ReceivingTD;
     return d;
   };
+  $:
   onMount(async () => {
     dataset = await csv(
-      "https://raw.githubusercontent.com/fantasydatapros/data/master/yearly/2021.csv",
+      url,
       row
     ).then((data) => {
       return data;
@@ -35,8 +66,10 @@
 </script>
 
 <main>
-  <Selector {options} bind:xAxis={xSelection} bind:yAxis={ySelection} />
-  <Weeks/>
+  <Selector {options} bind:selectedYear={year} bind:span={weekly} bind:xAxis={xSelection} bind:yAxis={ySelection} />
+  {#if weekly == true}
+    <Weeks bind:weekRange={week}/>
+  {/if}
   <ScatterPlot {dataset} {ySelection} {xSelection} />
 </main>
 

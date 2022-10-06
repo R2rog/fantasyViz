@@ -10,7 +10,7 @@
   let optionsValue = {
     quantitative: [
       "Tgt",
-      "FanatasyPoints",
+      "FantasyPoints",
       "Rec",
       "PassingYds",
       "PassingTD",
@@ -20,6 +20,7 @@
       "RushingAtt",
       "ReceivingYds",
       "ReceivingTD",
+      "PPRFantasyPoints"
     ],
     categorical: ["Player", "Tm", "Pos"],
   };
