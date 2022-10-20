@@ -1,5 +1,6 @@
 <script>
   import Axis from "./Axis.svelte";
+  import Selector from "./Selector.svelte";
   import { onMount } from "svelte";
   import { select, extent, scaleOrdinal, scaleLinear, scalePoint } from "d3";
   export let dataset;
