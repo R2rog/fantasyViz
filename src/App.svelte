@@ -3,6 +3,8 @@
   import ScatterPlot from "./lib/scatterPlot.svelte";
   import BarchartRace from "./lib/BarchartRace/BarchartRace.svelte";
   import Selector from "./lib/Selector.svelte";
+  import Card from "./lib/Card.svelte";
+  import Slider from "./lib/Slider.svelte";
   import Navbar from "./lib/Navbar.svelte";
   import Weeks from "./lib/Weeks.svelte";
   import { csv } from "d3";
@@ -73,9 +75,11 @@
     <nav>
       <Link to="/" style="color:orangered">Home</Link>
       <Link to="race" style="color:orangered">2021 Season</Link>
+      <Link to="history" style="color:orangered">History</Link>
     </nav>
     <Route path="/"><ScatterPlot {dataset} {ySelection} {xSelection} /></Route>
     <Route path="race" component="{BarchartRace}" />
+    <Route path="history" component="{Slider}" />
   </Router>
   <Selector {options} bind:selectedYear={year} bind:span={weekly} bind:xAxis={xSelection} bind:yAxis={ySelection} />
   {#if weekly == true}

@@ -97,7 +97,9 @@
       min-height: 420px;
       margin: 1rem;
       user-select: none;
-      background-color: black;
+      color: black;
+      font-weight: bold;
+      /*background-color: black;*/
     }
   
     figure > * {
