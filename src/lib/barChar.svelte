@@ -47,7 +47,7 @@
   
   <style>
     rect{
-      fill: aquamarine;
+      fill: black;
     }
   </style>
   

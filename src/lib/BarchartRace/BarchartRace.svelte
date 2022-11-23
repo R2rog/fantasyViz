@@ -98,6 +98,7 @@
       margin: 1rem;
       user-select: none;
       color: black;
+      background-color: white;
       font-weight: bold;
       /*background-color: black;*/
     }

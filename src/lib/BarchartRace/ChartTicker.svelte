@@ -17,7 +17,7 @@
       font-size: 2rem;
       font-weight: 900;
       font-feature-settings: "tnum" 1;
-      color: orangered;
+      color: black;
     }
     div {
       display: flex;

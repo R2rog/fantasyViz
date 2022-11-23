@@ -38,7 +38,7 @@
       padding: 0.5em;
       border: none;
       background: black;
-      color: orangered;
+      color: white;
       font-size: 20px;
       font-weight: bold;
       border-radius: 4px;

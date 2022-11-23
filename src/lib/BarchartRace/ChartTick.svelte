@@ -22,6 +22,7 @@
       height: 100%;
       top: 0;
       left: 0;
+      color: black;
     }
     .line {
       position: absolute;
@@ -36,7 +37,7 @@
       margin: 0;
       transform: translate(-50%, -100%);
       font-size:1em;
-      color: white;
+      color: black;
       font-weight: bold;
       font-feature-settings: "tnum" 1;
     }

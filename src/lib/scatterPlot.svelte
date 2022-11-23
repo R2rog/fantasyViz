@@ -128,8 +128,11 @@
   svg *{
     transition: 0.8s;
   }
+  svg{
+    background-color: white;
+  }
   g*{
-    color: aqua;
+    color: black;
     transition: 0.2s;
   }
   text {
