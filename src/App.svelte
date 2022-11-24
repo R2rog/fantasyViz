@@ -19,7 +19,8 @@
   let week = 1;
   let year = 2021;
   let options;
-  let dataURL = 'https://raw.githubusercontent.com/fantasydatapros/data/master/yearly/2021.csv';
+  //let dataURL = 'https://raw.githubusercontent.com/fantasydatapros/data/master/yearly/2021.csv';
+  let dataURL = 'https://raw.githubusercontent.com/R2rog/fantasyData/main/localData/2022_week11.csv';
   //week url: let url = 'https://raw.githubusercontent.com/fantasydatapros/data/master/yearly/2021.csv';
   async function fetchData(url){
     dataset = await csv(
@@ -29,11 +30,14 @@
       return data;
     });
   }
-
+  //Include ternary if to get the year and fetch the data from the fantasyData repo.
   $:{
-    weekly ? dataURL = 'https://raw.githubusercontent.com/fantasydatapros/data/master/weekly/'+year+'/'+'week'+week+'.csv':
+    /*weekly ? dataURL = 'https://raw.githubusercontent.com/fantasydatapros/data/master/weekly/'+year+'/'+'week'+week+'.csv':
             dataURL = 'https://raw.githubusercontent.com/fantasydatapros/data/master/yearly/'+year+'.csv';
-    fetchData(dataURL);
+    fetchData(dataURL);*/
+    if(year>2021 && weekly) dataURL = 'https://raw.githubusercontent.com/R2rog/fantasyData/main/localData/'+year+'_'+week+'.csv'
+    else if(year<=2021 && weekly) dataURL = 'https://raw.githubusercontent.com/fantasydatapros/data/master/weekly/'+year+'/'+'week'+week+'.csv';
+    else if(year<=2021 && !weekly) dataURL = 'https://raw.githubusercontent.com/fantasydatapros/data/master/yearly/'+year+'.csv';
   };
   /*$: console.log('Selected week: ', week);
   $: console.log('Weekly range?', weekly);

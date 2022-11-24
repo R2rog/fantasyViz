@@ -39,10 +39,10 @@
       .append("div")
       .attr("class", "tooltip")
       .style("opacity", 0)
-      .style("background-color", "white")
-      .style("color", "black")
+      .style("background-color", "black")
+      .style("color", "white")
       .style("border", "solid")
-      .style("border-color", "orange")
+      .style("border-color", "orangered")
       .style("border-width", "5px")
       .style("border-radius", "5px")
       .style("padding", "10px");
@@ -67,7 +67,7 @@
       .style("top", e.pageY - 28 + "px")
       .transition()
       .duration(200) // ms
-      .style("opacity", 0.9);
+      .style("opacity", 1);
   };
   function hideTooltip() {
     tooltip
@@ -135,7 +135,7 @@
     transition: 0.2s;
   }
   text {
-    fill: white;
+    fill: black;
     padding: 1rem;
   }
   .tooltip {
@@ -146,6 +146,8 @@
     pointer-events: none;
     height: 100px;
     width: 100px;
-    background-color: white;
+    background-color: black;
+    color: white;
+    font-weight: bold;
   }
 </style>

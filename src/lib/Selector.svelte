@@ -50,8 +50,13 @@
   #axis-selector {
     display: flex;
     justify-content: space-around;
+    align-content: center;
+    align-items: center;
     margin: 2rem;
     height: 35px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
   }
   *:focus {
     outline: none;
@@ -180,4 +185,8 @@
   #button-16 .checkbox:checked ~ .layer {
     background-color: #fcebeb;
   }
+  /*label{
+    color: black;
+    font-weight: bold;
+  }*/
 </style>
