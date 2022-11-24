@@ -98,7 +98,7 @@
     .domain(classSet)
     .range(["#33FF74 ", "#FF4646", "#FFF446", "#7846FF"]);
 </script>
-
+<Selector  />
 <div id="my_dataviz">
   <svg {width} {height}>
     <g transform={`translate(${margin.left},${margin.right})`}>

@@ -81,7 +81,7 @@
     <Route path="race" component="{BarchartRace}" />
     <Route path="history" component="{Slider}" />
   </Router>
-  <Selector {options} bind:selectedYear={year} bind:span={weekly} bind:xAxis={xSelection} bind:yAxis={ySelection} />
+  <!--Selector {options} bind:selectedYear={year} bind:span={weekly} bind:xAxis={xSelection} bind:yAxis={ySelection} /-->
   {#if weekly == true}
     <Weeks bind:weekRange={week}/>
   {/if}
