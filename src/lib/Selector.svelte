@@ -1,14 +1,9 @@
 <script>
-   /*export let xAxis;
+    export let xAxis;
     export let yAxis;
     export let options= [1,2,3,4];
     export let span;
-    export let selectedYear;*/
-    let xAxis;
-    let yAxis;
-    let options= [1,2,3,4];
-    let span;
-    let selectedYear;
+    export let selectedYear;
     let previousXAxis = '';
     let previousYAxis = '';
     function axisChange(e){

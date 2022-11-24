@@ -77,11 +77,13 @@
       <Link to="race" style="color:orangered">2021 Season</Link>
       <Link to="history" style="color:orangered">History</Link>
     </nav>
-    <Route path="/"><ScatterPlot {dataset} {ySelection} {xSelection} /></Route>
+    <Route path="/">
+      <Selector {options} bind:selectedYear={year} bind:span={weekly} bind:xAxis={xSelection} bind:yAxis={ySelection} />
+      <ScatterPlot {dataset} {ySelection} {xSelection} />
+    </Route>
     <Route path="race" component="{BarchartRace}" />
     <Route path="history" component="{Slider}" />
   </Router>
-  <!--Selector {options} bind:selectedYear={year} bind:span={weekly} bind:xAxis={xSelection} bind:yAxis={ySelection} /-->
   {#if weekly == true}
     <Weeks bind:weekRange={week}/>
   {/if}
