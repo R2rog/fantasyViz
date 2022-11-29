@@ -35,9 +35,11 @@
     /*weekly ? dataURL = 'https://raw.githubusercontent.com/fantasydatapros/data/master/weekly/'+year+'/'+'week'+week+'.csv':
             dataURL = 'https://raw.githubusercontent.com/fantasydatapros/data/master/yearly/'+year+'.csv';
     fetchData(dataURL);*/
-    if(year>2021 && weekly) dataURL = 'https://raw.githubusercontent.com/R2rog/fantasyData/main/localData/'+year+'_'+week+'.csv'
+    if(year>2021 && weekly) dataURL = 'https://raw.githubusercontent.com/R2rog/fantasyData/main/localData/'+year+'_'+'week'+week+'.csv'
     else if(year<=2021 && weekly) dataURL = 'https://raw.githubusercontent.com/fantasydatapros/data/master/weekly/'+year+'/'+'week'+week+'.csv';
     else if(year<=2021 && !weekly) dataURL = 'https://raw.githubusercontent.com/fantasydatapros/data/master/yearly/'+year+'.csv';
+    fetchData(dataURL)
+    console.log('Data URL changed: ',dataURL);
   };
   /*$: console.log('Selected week: ', week);
   $: console.log('Weekly range?', weekly);
@@ -83,14 +85,14 @@
     </nav>
     <Route path="/">
       <Selector {options} bind:selectedYear={year} bind:span={weekly} bind:xAxis={xSelection} bind:yAxis={ySelection} />
+      {#if weekly == true}
+        <Weeks bind:weekRange={week}/>
+      {/if}
       <ScatterPlot {dataset} {ySelection} {xSelection} />
     </Route>
     <Route path="race" component="{BarchartRace}" />
     <Route path="history" component="{Slider}" />
   </Router>
-  {#if weekly == true}
-    <Weeks bind:weekRange={week}/>
-  {/if}
   <!--ScatterPlot {dataset} {ySelection} {xSelection} /-->
 </main>
 

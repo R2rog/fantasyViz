@@ -118,7 +118,7 @@
       <text transform={`translate(${-35},${innerHeight / 2}) rotate(-90)`}
         >{ySelection}</text
       >
-      <text x={innerWidth / 2} y={innerHeight + 40}>{xSelection}</text>
+      <text x={innerWidth / 2} id="xaxis-tag" y={innerHeight + 40}>{xSelection}</text>
     </g>
   </svg>
 </div>
@@ -137,6 +137,9 @@
   text {
     fill: black;
     padding: 1rem;
+  }
+  #xaxis-tag{
+    margin-top: 1rem;
   }
   .tooltip {
     position: absolute;

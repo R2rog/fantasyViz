@@ -52,7 +52,7 @@
     justify-content: space-around;
     align-content: center;
     align-items: center;
-    margin: 2rem;
+    margin-top: 2rem;
     height: 35px;
     background-color: black;
     color: white;
