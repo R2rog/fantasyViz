@@ -3,7 +3,6 @@
 
   // Import Swiper styles
   import "swiper/css";
-
   import "swiper/css/effect-cards";
   import 'swiper/css/navigation';
   import 'swiper/css/pagination';
@@ -24,18 +23,18 @@
   <SwiperSlide>
     <div class="slider-content">
       <div class="card-img">
-      <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759872/kuldar-kalvik-799168-unsplash.webp" alt="">
+      <img src="/img/Bill Winkenbach.jpeg" alt="Bill Winkenbach">
       </div>
       <div class="card-content">
         <h2>March 1962</h2>
-        <p>Will Winkelbach, a part owner from the then AFL football team the Oakland Raiders, alongside with Bill Turner and Scotty Striling create the first fantasy football league which would go by the name of the Greater Oakland Professional Pigskin Prognosticators League (GOPPPL for short). The idea came from a game Winkelbach created around the PGA golf tour  where every week the players would draft pro golfers and then add up their scores after the weekly tournament was over.</p>
+        <p>Bill Winkenbach, a part owner from the then AFL football team the Oakland Raiders, alongside with Bill Turner and Scotty Striling create the first fantasy football league which would go by the name of the Greater Oakland Professional Pigskin Prognosticators League (GOPPPL for short). The idea came from a game Winkelbach created around the PGA golf tour  where every week the players would draft pro golfers and then add up their scores after the weekly tournament was over.</p>
       </div>
     </div>
   </SwiperSlide>
   <SwiperSlide>
     <div class="slider-content">
       <div class="card-img">
-      <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759872/kuldar-kalvik-799168-unsplash.webp" alt="">
+      <img src="/img/The founders.jpeg" alt="The founders of the GOPPPL">
       </div>
       <div class="card-content">
         <h2>August 1963</h2>
@@ -48,7 +47,7 @@
   <SwiperSlide>
     <div class="slider-content">
       <div class="card-img">
-      <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759872/kuldar-kalvik-799168-unsplash.webp" alt="">
+      <img src="/img/AFL NFL.jpeg" alt="AFL and NFL merger">
       </div>
       <div class="card-content">
         <h2>June 1966</h2>
@@ -59,7 +58,7 @@
   <SwiperSlide>
     <div class="slider-content">
       <div class="card-img">
-      <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759872/kuldar-kalvik-799168-unsplash.webp" alt="">
+      <img src="/img/Superbowl1.jpeg" alt="Superbowl 1 between San Francisco and Green Bay">
       </div>
       <div class="card-content">
         <h2>January 1967</h2>
@@ -70,7 +69,7 @@
   <SwiperSlide>
     <div class="slider-content">
       <div class="card-img">
-      <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759872/kuldar-kalvik-799168-unsplash.webp" alt="">
+      <img src="/img/andy_mousalimas.jpeg" alt="Andy Mousalimas and Bill Winkenbach">
       </div>
       <div class="card-content">
         <h2>1969</h2>
@@ -81,7 +80,7 @@
   <SwiperSlide>
     <div class="slider-content">
       <div class="card-img">
-      <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759872/kuldar-kalvik-799168-unsplash.webp" alt="">
+      <img src="/img/FF women.jpeg" alt="Women playing fantasy football">
       </div>
       <div class="card-content">
         <h2>March 1974</h2>
@@ -92,7 +91,7 @@
   <SwiperSlide>
     <div class="slider-content">
       <div class="card-img">
-      <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759872/kuldar-kalvik-799168-unsplash.webp" alt="">
+      <img src="/img/he early days.jpeg" alt="Old bar full of people">
       </div>
       <div class="card-content">
         <h2>The early days</h2>
@@ -105,7 +104,7 @@
   <SwiperSlide>
     <div class="slider-content">
       <div class="card-img">
-      <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759872/kuldar-kalvik-799168-unsplash.webp" alt="">
+      <img src="/img/one.jpeg" alt="The number one">
       </div>
       <div class="card-content">
         <h2>1989</h2>
@@ -118,7 +117,7 @@
   <SwiperSlide>
     <div class="slider-content">
       <div class="card-img">
-      <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759872/kuldar-kalvik-799168-unsplash.webp" alt="">
+      <img src="/img/bye week.png" alt="Bye week logo">
       </div>
       <div class="card-content">
         <h2>1990</h2>
@@ -131,20 +130,7 @@
   <SwiperSlide>
     <div class="slider-content">
       <div class="card-img">
-      <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759872/kuldar-kalvik-799168-unsplash.webp" alt="">
-      </div>
-      <div class="card-content">
-        <h2>1990</h2>
-        <p>
-          The NFL introduces bye weeks which has a huge impact in the game. The first season with the possibility of a Byepocalipse is played.
-        </p>
-      </div>
-    </div>
-  </SwiperSlide>
-  <SwiperSlide>
-    <div class="slider-content">
-      <div class="card-img">
-      <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759872/kuldar-kalvik-799168-unsplash.webp" alt="">
+      <img src="/img/yahoo ff.png" alt="Yahoo fantasy football logo">
       </div>
       <div class="card-content">
         <h2>1999</h2>
@@ -157,7 +143,7 @@
   <SwiperSlide>
     <div class="slider-content">
       <div class="card-img">
-      <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759872/kuldar-kalvik-799168-unsplash.webp" alt="">
+      <img src="/img/twelve.png" alt="The number twelve">
       </div>
       <div class="card-content">
         <h2>2006</h2>
@@ -170,7 +156,7 @@
   <SwiperSlide>
     <div class="slider-content">
       <div class="card-img">
-      <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759872/kuldar-kalvik-799168-unsplash.webp" alt="">
+      <img src="/img/Redzone.png" alt="NFL Redzone logo">
       </div>
       <div class="card-content">
         <h2>2009</h2>
@@ -189,6 +175,16 @@
       </div>
     </div>
   </SwiperSlide>
+  <SwiperSlide>
+    <div class="slider-content">
+      <div class="card-content">
+        <h2>Sources</h2>
+        <a href="https://www.cbssports.com/fantasy/football/news/fantasy-football-the-history-of-fantasy-football-the-biggest-seasons-and-the-future/">Fantasy Football: The history of Fantasy football, the biggest seasons and the future</a>
+        <a href="https://www.sandiegouniontribune.com/sports/chargers/sdut-the-history-of-fantasy-football-cure-2014jul28-story.html">The history of fantasy football</a>
+        <a href="https://www.sbnation.com/ad/16119954/explainer-nfl-fantasy-football-history">Fantasy Football is a lot of fun -- but it used to be a lot of work</a>
+        <a href="https://fantasyindex.com/resources/the-birth-of-fantasy-football">The birth of fantasy football</a>
+    </div>
+  </SwiperSlide>
 </Swiper>
 
 <style>
@@ -200,7 +196,7 @@
   color: black;
 }
 .card-img{
-  background-color: orangered;
+  /*background-color: orangered;*/
   display: flex;
   align-content: center;
   height: 50%;
@@ -215,7 +211,7 @@
 img{
   height: 270px;
   width: 270px;
-  background-color: orangered;
+  /*background-color: orangered;
   opacity: 50%;
 }
 </style>

@@ -20,7 +20,9 @@
       "RushingAtt",
       "ReceivingYds",
       "ReceivingTD",
-      "PPRFantasyPoints"
+      "PPRFantasyPoints",
+      "Standard",
+      "PPR"
     ],
     categorical: ["Player", "Tm", "Pos"],
   };
@@ -30,7 +32,7 @@
   const height = 600;
   //const height = window.innerHeight;
   const classSet = new Set(dataset.map((d) => d.Pos));
-  const margin = { top: 15, bottom: 50, left: 50, right: 20 };
+  const margin = { top: 25, bottom: 50, left: 50, right: 0 };
   const innerHeight = height - margin.top - margin.bottom,
     innerWidth = width - margin.left - margin.right;
 
@@ -95,7 +97,7 @@
 
   $: colorScale = scaleOrdinal()
     .domain(classSet)
-    .range(["#33FF74 ", "#FF4646", "#FFF446", "#7846FF"]);
+    .range(["#35e859", "#FF4646", "#05e5fa", "#7846FF"]);
 </script>
 
 <div id="my_dataviz">
@@ -118,7 +120,7 @@
       <text transform={`translate(${-35},${innerHeight / 2}) rotate(-90)`}
         >{ySelection}</text
       >
-      <text x={innerWidth / 2} id="xaxis-tag" y={innerHeight + 40}>{xSelection}</text>
+      <text x={innerWidth / 2} id="xaxis-tag" y={innerHeight + 55}>{xSelection}</text>
     </g>
   </svg>
 </div>
@@ -137,6 +139,7 @@
   text {
     fill: black;
     padding: 1rem;
+    font-weight: bold;
   }
   #xaxis-tag{
     margin-top: 1rem;

@@ -1,5 +1,4 @@
 <script>
-import {fly} from 'svelte/transition'
 let max = 16;
 export let weekRange = 0;
 </script>

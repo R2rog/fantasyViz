@@ -18,7 +18,7 @@ let options = { duration: 1000 }
         switch (position) {
             case  "bottom":
                 axis  =  axisBottom(scale).tickSizeOuter(0);
-                transform  =  `translate(5, ${innerHeight+18})`;
+                transform  =  `translate(0, ${innerHeight+25})`;
                 id = "bottom-axis";
                 break;
 

@@ -2,10 +2,9 @@
   import { Router, Route, Link } from "svelte-routing";
   import ScatterPlot from "./lib/scatterPlot.svelte";
   import BarchartRace from "./lib/BarchartRace/BarchartRace.svelte";
+  import Footer from "./lib/Footer.svelte";
   import Selector from "./lib/Selector.svelte";
-  import Card from "./lib/Card.svelte";
   import Slider from "./lib/Slider.svelte";
-  import Navbar from "./lib/Navbar.svelte";
   import Weeks from "./lib/Weeks.svelte";
   import { csv } from "d3";
   import { onMount } from "svelte";
@@ -23,27 +22,28 @@
   let dataURL = 'https://raw.githubusercontent.com/R2rog/fantasyData/main/localData/2022_week11.csv';
   //week url: let url = 'https://raw.githubusercontent.com/fantasydatapros/data/master/yearly/2021.csv';
   async function fetchData(url){
-    dataset = await csv(
+    try {
+      dataset = await csv(
       url,
       row
-    ).then((data) => {
-      return data;
-    });
+      ).then((data) => {
+        return data;
+      });
+    } catch (error) {
+      window.alert('No dataset found. Please try another option')
+    }
   }
-  //Include ternary if to get the year and fetch the data from the fantasyData repo.
   $:{
-    /*weekly ? dataURL = 'https://raw.githubusercontent.com/fantasydatapros/data/master/weekly/'+year+'/'+'week'+week+'.csv':
-            dataURL = 'https://raw.githubusercontent.com/fantasydatapros/data/master/yearly/'+year+'.csv';
-    fetchData(dataURL);*/
     if(year>2021 && weekly) dataURL = 'https://raw.githubusercontent.com/R2rog/fantasyData/main/localData/'+year+'_'+'week'+week+'.csv'
+    else if(year==2022){
+      weekly = true;
+      week = 1;
+      dataURL = 'https://raw.githubusercontent.com/R2rog/fantasyData/main/localData/'+year+'_'+'week'+week+'.csv';
+    }
     else if(year<=2021 && weekly) dataURL = 'https://raw.githubusercontent.com/fantasydatapros/data/master/weekly/'+year+'/'+'week'+week+'.csv';
     else if(year<=2021 && !weekly) dataURL = 'https://raw.githubusercontent.com/fantasydatapros/data/master/yearly/'+year+'.csv';
     fetchData(dataURL)
-    console.log('Data URL changed: ',dataURL);
   };
-  /*$: console.log('Selected week: ', week);
-  $: console.log('Weekly range?', weekly);
-  $: console.log('Selected year: ', year);*/
   $: options = dataset.columns; 
   $: console.log('Dataset: ', dataset);
   const row = function (d) {
@@ -73,15 +73,21 @@
       return data;
     });
   });
+  function hover(e){
+    color: 'orangered'
+  }
+  function restore(e){
+    color: 'white'
+  }
 </script>
 
 <main>
   <!--Navbar></Navbar-->
   <Router url="{url}">
     <nav>
-      <Link to="/" style="color:orangered">Home</Link>
-      <Link to="race" style="color:orangered">2021 Season</Link>
-      <Link to="history" style="color:orangered">History</Link>
+      <Link on:mouseover={hover} on:mouseout={restore} to="/" style="color:white">FantasyViz</Link>
+      <Link on:mouseover={hover} on:mouseout={restore} to="race" style="color:white">the 2021 race</Link>
+      <Link on:mouseover={hover} on:mouseout={restore} to="history" style="color:white">the history of fantasy football</Link>
     </nav>
     <Route path="/">
       <Selector {options} bind:selectedYear={year} bind:span={weekly} bind:xAxis={xSelection} bind:yAxis={ySelection} />
@@ -93,12 +99,14 @@
     <Route path="race" component="{BarchartRace}" />
     <Route path="history" component="{Slider}" />
   </Router>
+  <Footer></Footer>
   <!--ScatterPlot {dataset} {ySelection} {xSelection} /-->
 </main>
 
 <style>
   nav{
     background-color: black;
+    color: white !important;
     height: 3rem;
     font-size: 1.5rem;
     display: flex;
