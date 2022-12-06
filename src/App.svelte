@@ -85,9 +85,9 @@
   <!--Navbar></Navbar-->
   <Router url="{url}">
     <nav>
-      <Link on:mouseover={hover} on:mouseout={restore} to="/" style="color:white">FantasyViz</Link>
-      <Link on:mouseover={hover} on:mouseout={restore} to="race" style="color:white">the 2021 race</Link>
-      <Link on:mouseover={hover} on:mouseout={restore} to="history" style="color:white">the history of fantasy football</Link>
+      <Link on:mouseover={hover} on:mouseout={restore} to="/" style="color:white"><img id="logo" src="/logo.png" alt="FantasyViz logo"></Link>
+      <Link on:mouseover={hover} on:mouseout={restore} to="race" style="color:white"><a>the 2021 race</a></Link>
+      <Link on:mouseover={hover} on:mouseout={restore} to="history" style="color:white"><a>the history of fantasy football</a></Link>
     </nav>
     <Route path="/">
       <Selector {options} bind:selectedYear={year} bind:span={weekly} bind:xAxis={xSelection} bind:yAxis={ySelection} />
@@ -104,6 +104,15 @@
 </main>
 
 <style>
+  #logo{
+    height:45px;
+  }
+  a{
+    color: white;
+  }
+  a:hover{
+    color: orangered;
+  }
   nav{
     background-color: black;
     color: white !important;
