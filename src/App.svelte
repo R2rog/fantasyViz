@@ -105,7 +105,7 @@
 
 <style>
   #logo{
-    height:45px;
+    height:4rem !important;
   }
   a{
     color: white;
@@ -114,13 +114,17 @@
     color: orangered;
   }
   nav{
-    background-color: black;
+    background-color: black !important;
+    background: black;
     color: white !important;
-    height: 3rem;
+    height: 5rem;
     font-size: 1.5rem;
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: space-evenly;
+  }
+  img{
+    height: 5rem;
   }
 </style>

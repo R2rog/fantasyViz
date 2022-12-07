@@ -92,12 +92,13 @@
     figure {
       display: block;
       position: relative;
-      width: 100%;
+      width: 98%;
       height: 70vh;
       min-height: 420px;
       margin: 1rem;
       user-select: none;
       color: black;
+      font-size: 1.5rem;
       background-color: white;
       font-weight: bold;
       /*background-color: black;*/

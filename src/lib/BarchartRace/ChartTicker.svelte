@@ -15,7 +15,7 @@
       right: 0;
       margin: 1rem;
       font-size: 2rem;
-      font-weight: 900;
+      font-weight: bold;
       font-feature-settings: "tnum" 1;
       color: black;
     }

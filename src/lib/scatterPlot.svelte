@@ -27,9 +27,9 @@
     categorical: ["Player", "Tm", "Pos"],
   };
   let tooltip;
-  const width = 1000;
+  const width = 1375;
   //const width = window.innerWidth;
-  const height = 600;
+  const height = 650;
   //const height = window.innerHeight;
   const classSet = new Set(dataset.map((d) => d.Pos));
   const margin = { top: 25, bottom: 50, left: 50, right: 0 };
@@ -131,6 +131,7 @@
   }
   svg{
     background-color: white;
+    margin-top: 1rem;
   }
   g*{
     color: black;

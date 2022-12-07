@@ -29,8 +29,8 @@
       top: 0;
       left: 0;
       height: 100%;
-      width: 1px;
-      background: #fff;
+      width: 1.5px;
+      background: black;
       opacity: 0.5;
     }
     .value {

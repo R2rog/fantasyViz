@@ -1,7 +1,7 @@
 <script>
     import { getContext } from "svelte";
     import Bar from "./ChartBar.svelte";
-    import colors from "../../assets/data/json/colors.json";
+    import colors from "../../assets/data/json/colors2021.json";
   
     const { data } = getContext("Chart");
     const colorCount = colors.length;
