@@ -4,7 +4,7 @@ import { axisBottom, axisLeft } from  "d3-axis";
 let options = { duration: 1000 }
 
     export let  innerHeight;
-    export let  margin;
+    //export let  margin;
     export let  position;
     export let  scale;
 

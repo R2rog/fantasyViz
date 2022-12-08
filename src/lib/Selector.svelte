@@ -69,39 +69,7 @@
     counter-reset: button-counter;
   }
   
-  .row {
-    display: table-row;
-  }
 
-  .toggle-button-cover {
-    display: table-cell;
-    position: relative;
-    width: 200px;
-    height: 140px;
-    box-sizing: border-box;
-  }
-
-  .button-cover {
-    height: 100px;
-    margin: 20px;
-    background-color: #fff;
-    box-shadow: 0 10px 20px -8px #c5d6d6;
-    border-radius: 4px;
-  }
-
-  .button-cover:before {
-    counter-increment: button-counter;
-    content: counter(button-counter);
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    color: #d7e3e3;
-    font-size: 12px;
-    line-height: 1;
-    padding: 5px;
-  }
-
-  .button-cover,
   .knobs,
   .layer {
     position: absolute;
@@ -116,11 +84,6 @@
     width: 85px;
     height: 36px;
     overflow: hidden;
-  }
-
-  .button.r,
-  .button.r .layer {
-    border-radius: 100px;
   }
 
   .button.b2 {

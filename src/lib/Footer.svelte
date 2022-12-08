@@ -53,11 +53,6 @@ display:inline-block;
 margin:0px 30px;
 }
 
-.footer .row a i{
-font-size:2em;
-margin:0% 1%;
-}
-
 @media (max-width:720px){
 .footer{
 text-align:left;
@@ -67,9 +62,6 @@ padding:5%;
 display:block;
 margin:10px 0px;
 text-align:left;
-}
-.footer .row a i{
-margin:0% 3%;
 }
 }
 </style>

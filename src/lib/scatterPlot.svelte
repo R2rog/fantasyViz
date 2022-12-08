@@ -145,16 +145,4 @@
   #xaxis-tag{
     margin-top: 1rem;
   }
-  .tooltip {
-    position: absolute;
-    font-size: 12px;
-    width: auto;
-    height: auto;
-    pointer-events: none;
-    height: 100px;
-    width: 100px;
-    background-color: black;
-    color: white;
-    font-weight: bold;
-  }
 </style>
