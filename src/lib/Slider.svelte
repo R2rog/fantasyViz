@@ -195,6 +195,9 @@
   justify-content: space-around;
   color: black;
 }
+a{
+  color: black !important;
+}
 .card-img{
   /*background-color: orangered;*/
   display: flex;
