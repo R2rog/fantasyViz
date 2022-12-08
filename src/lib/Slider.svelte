@@ -196,7 +196,7 @@
   color: black;
 }
 a{
-  color: black !important;
+  color: black!important;;
 }
 .card-img{
   /*background-color: orangered;*/
@@ -211,10 +211,5 @@ a{
   justify-content: center;
   font-size: 1.25rem;
 }
-img{
-  height: 270px;
-  width: 270px;
-  /*background-color: orangered;
-  opacity: 50%;
-}
+
 </style>
