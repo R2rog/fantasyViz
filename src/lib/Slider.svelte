@@ -204,6 +204,10 @@ a{
   align-content: center;
   height: 50%;
 }
+img{
+  height: 325px;
+  width: 350px;
+}
 .card-content{
   margin: 2rem;
   display: flex;
