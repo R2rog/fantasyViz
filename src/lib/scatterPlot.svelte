@@ -27,9 +27,9 @@
     categorical: ["Player", "Tm", "Pos"],
   };
   let tooltip;
-  const width = 1375;
+  let width = 1375;
   //const width = window.innerWidth;
-  const height = 650;
+  let height = 650;
   //const height = window.innerHeight;
   const classSet = new Set(dataset.map((d) => d.Pos));
   const margin = { top: 25, bottom: 50, left: 50, right: 0 };
@@ -100,7 +100,7 @@
     .range(["#35e859", "#FF4646", "#05e5fa", "#7846FF"]);
 </script>
 
-<div id="my_dataviz">
+<div id="my_dataviz" bind:clientWidth={width}>
   <svg {width} {height}>
     <g transform={`translate(${margin.left},${margin.right})`}>
       <Axis {innerHeight} {margin} scale={xScale} position="bottom" />
