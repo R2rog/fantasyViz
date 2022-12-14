@@ -148,6 +148,25 @@
   #button-16 .checkbox:checked ~ .layer {
     background-color: #fcebeb;
   }
+  @media only screen and (max-width: 480px) {
+      select{
+        font-size: 0.5rem;
+        width:60px;
+      }
+      #axis-selector{
+        font-size: 0.5rem;
+      }
+      #button-16{
+        width:65px;
+        height:30px;
+      }
+      #button-16 .knobs{
+        font-size: 0.5rem;
+      }
+      #button-16 .checkbox:checked + .knobs:before {
+        content: "W";
+      }
+    }
   /*label{
     color: black;
     font-weight: bold;
