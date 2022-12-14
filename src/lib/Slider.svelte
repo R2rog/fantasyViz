@@ -215,5 +215,14 @@ img{
   justify-content: center;
   font-size: 1.25rem;
 }
-
+@media screen and (max-width: 390px){
+  img{
+    width: 175px;
+    height: 150px;
+  }
+  .card-content{
+    font-size: 0.5rem;
+    line-height: normal;
+  }
+}
 </style>

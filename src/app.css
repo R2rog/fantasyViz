@@ -83,7 +83,6 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
-
 /*SLIDER*/
 .swiper {
   width: 800px;
@@ -129,4 +128,10 @@ nav{
   align-items: center;
   flex-direction: row;
   justify-content: space-evenly;
+}
+@media screen and (max-width: 390px) {
+  .swiper{
+    width: 350px;
+    height: 350px;
+  }
 }
