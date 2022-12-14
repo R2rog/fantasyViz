@@ -111,7 +111,7 @@ button:focus-visible {
   background-color: white;
 }
 #logo{
-  height:4rem !important;
+    height:4rem;
 }
 a{
   color: white;
@@ -129,9 +129,15 @@ nav{
   flex-direction: row;
   justify-content: space-evenly;
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 480px) {
   .swiper{
     width: 350px;
     height: 350px;
+  }
+  nav{
+    font-size: 0.75rem !important;
+  }
+  #logo{
+    height: 2.5rem !important;
   }
 }

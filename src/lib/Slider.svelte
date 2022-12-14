@@ -215,7 +215,7 @@ img{
   justify-content: center;
   font-size: 1.25rem;
 }
-@media screen and (max-width: 390px){
+@media screen and (max-width: 480px){
   img{
     width: 175px;
     height: 150px;
