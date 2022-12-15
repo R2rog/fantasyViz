@@ -86,8 +86,8 @@
   <Router url="{url}">
     <nav>
       <Link on:mouseover={hover} on:mouseout={restore} to="/"><img id="logo" src="/logo.png" alt="FantasyViz logo"></Link>
-      <Link on:mouseover={hover} on:mouseout={restore} to="race"><a>the 2021 race</a></Link>
-      <Link on:mouseover={hover} on:mouseout={restore} to="history"><a>the history of fantasy football</a></Link>
+      <Link on:mouseover={hover} on:mouseout={restore} to="race">the 2021 race</Link>
+      <Link on:mouseover={hover} on:mouseout={restore} to="history">the history of fantasy football</Link>
     </nav>
     <Route path="/">
       <Selector {options} bind:selectedYear={year} bind:span={weekly} bind:xAxis={xSelection} bind:yAxis={ySelection} />
@@ -127,4 +127,12 @@
   img{
     height: 5rem;
   }
+  @media screen and (max-width: 480px) {
+  #logo{
+    height: 2rem !important;
+  }
+  nav{
+    height: 3rem;
+  }
+}
 </style>

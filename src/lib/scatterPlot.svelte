@@ -40,6 +40,7 @@
     tooltip = select("#my_dataviz")
       .append("div")
       .attr("class", "tooltip")
+      .attr("id","player-tooltip")
       .style("opacity", 0)
       .style("background-color", "black")
       .style("color", "white")
@@ -52,6 +53,7 @@
 
   let showTooltip = function (data, e) {
     console.log('Event target', e.target);
+    let tooltipPointer = document.getElementById('player-tooltip')
     let html =
       "Player: " +
       data.Player +
@@ -70,6 +72,7 @@
       .transition()
       .duration(200) // ms
       .style("opacity", 1);
+    tooltipPointer.focus()
   };
   function hideTooltip() {
     tooltip
@@ -144,5 +147,9 @@
   }
   #xaxis-tag{
     margin-top: 1rem;
+  }
+  #tooltip-player:focus{
+    outline: solid;
+    outline-color: aquamarine;
   }
 </style>

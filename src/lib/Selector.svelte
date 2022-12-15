@@ -22,24 +22,24 @@
 
 <div id="axis-selector">
     <label for="season">Season</label>
-    <select id="season" bind:value={selectedYear}>
+    <select tabindex="0" id="season" bind:value={selectedYear}>
         {#each {length: 53} as _, i}
         <option value={1970+i} id={(1970+i)+'_season_'} >{1970+i}</option>
         {/each}
     </select>
     <div class="button b2" id="button-16">
-        <input bind:checked={span} type="checkbox" id="span" class="checkbox" />
+        <input tabindex="0" bind:checked={span} type="checkbox" id="span" class="checkbox" />
         <div class="knobs"></div>
         <div class="layer"></div>
     </div>
     <label for="x-axis">x axis</label>
-    <select bind:value={xAxis} on:change={axisChange} id="x-axis">
+    <select tabindex="0" bind:value={xAxis} on:change={axisChange} id="x-axis">
         {#each options as option}
             <option value={option} id={'x-'+option} >{option}</option>
         {/each}
     </select>
     <label for="y-axis">y axis</label>
-    <select bind:value={yAxis} on:change={axisChange} id="y-axis">
+    <select tabindex="0" bind:value={yAxis} on:change={axisChange} id="y-axis">
         {#each options as option}
             <option value={option} id={'y-'+option}>{option}</option>
         {/each}
@@ -59,7 +59,7 @@
     font-weight: bold;
   }
   *:focus {
-    outline: none;
+    outline: solid;
   }
 
   #app-cover {
