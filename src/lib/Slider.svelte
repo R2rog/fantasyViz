@@ -220,6 +220,10 @@ img{
     width: 175px;
     height: 150px;
   }
+  iframe{
+    width: 325px !important;
+    height: 200px !important;
+  }
   .card-content{
     font-size: 0.5rem;
     line-height: normal;

@@ -91,10 +91,11 @@
     figure {
       display: block;
       position: relative;
-      width: 98%;
+      width: 100%;
       height: 70vh;
       min-height: 420px;
-      margin: 1rem;
+      /*margin: 1rem;*/
+      margin-left: 0px;
       user-select: none;
       color: black;
       font-size: 1.5rem;
