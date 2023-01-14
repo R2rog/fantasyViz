@@ -9,8 +9,8 @@
     import Axis from "./ChartAxis.svelte";
     import Labels from "./ChartLabels.svelte";
     import Ticker from "./ChartTicker.svelte";
-    import {keyframes} from "../../season2021"
-    
+    //import {keyframes} from "../../season2021"
+    import {keyframes} from "../../season2022"
     const duration = 3000; // ms between keyframes
     const barCount = 10; // how many bars to show
     const barMargin = 4; // space between bars

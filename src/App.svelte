@@ -86,7 +86,7 @@
   <Router url="{url}">
     <nav>
       <Link on:mouseover={hover} on:mouseout={restore} to="/"><img id="logo" src="/logo.png" alt="FantasyViz logo"></Link>
-      <Link on:mouseover={hover} on:mouseout={restore} to="race">the 2021 race</Link>
+      <Link on:mouseover={hover} on:mouseout={restore} to="race">the 2022 race</Link>
       <Link on:mouseover={hover} on:mouseout={restore} to="history">the history of fantasy football</Link>
     </nav>
     <Route path="/">
